@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">TeldaProject</string>
+
+
+    <!-- Popular movies -->
+    <string name="popular_movies_search_hint">Search in images..</string>
+    <string name="popular_movies_movie_title">Kill Bill: Vol.1</string>
+    <string name="popular_movies_movie_date">2021–12–15</string>
+    <string name="popular_movies_movie_overview">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+
     <!-- Response messages-->
     <string name="error_no_connection">Oops , there\'s no Network connection</string>
     <string name="error_message_title">Error!</string>

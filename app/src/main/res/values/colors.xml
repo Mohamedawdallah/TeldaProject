@@ -5,7 +5,8 @@
     <color name="colorPrimaryLight">#FEF6B8</color>
     <color name="colorAccent">#fffcdf</color>
     <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorOnSecondary">#000000</color>
+    <color name="colorOnSecondary">#131313</color>
 
     <color name="colorBlackTransparent">#33000000</color>
+    <color name="colorWhiteTransparent">#33939292</color>
 </resources>

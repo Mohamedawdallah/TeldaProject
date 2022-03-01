@@ -2,7 +2,7 @@ package com.telda.presentation.utils.manager
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.halanchallenge.data.utils.Resource
+import com.telda.data.utils.Resource
 import com.telda.presentation.utils.Event
 
 class ResponseManager{

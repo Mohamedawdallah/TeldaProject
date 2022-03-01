@@ -1,4 +1,4 @@
-package com.example.halanchallenge.data.utils
+package com.telda.data.utils
 
 
 sealed class Resource<T>(

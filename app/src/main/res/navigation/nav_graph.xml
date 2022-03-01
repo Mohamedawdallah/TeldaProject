@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/moviesPopularFragment"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/moviesPopularFragment"
+        android:name="com.telda.presentation.ui.popular_movies.MoviesPopularFragment">
+        <action
+            android:id="@+id/action_moviesPopularFragment_to_detailsFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:animator/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out"/>
+
+    </fragment>
+
+
+</navigation>

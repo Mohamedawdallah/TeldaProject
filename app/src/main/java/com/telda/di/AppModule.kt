@@ -1,5 +1,8 @@
 package com.telda.di
 
+import com.google.gson.GsonBuilder
+import com.telda.BuildConfig
+import com.telda.data.remote.MoviesApis
 import com.telda.presentation.utils.manager.ResponseManager
 import dagger.Module
 import dagger.Provides
@@ -11,6 +14,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
+
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -36,19 +40,25 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit
-        .Builder()
-        .addConverterFactory(GsonConverterFactory.create())
-      //  .baseUrl(BuildConfig.BASE_URL)
-        .client(okHttpClient)
-        .build()
-
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+        val gson = GsonBuilder()
+            .setLenient()
+            .create()
+        return Retrofit
+            .Builder()
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .baseUrl(BuildConfig.BASE_URL)
+            .client(okHttpClient)
+            .build()
+    }
 
     @Singleton
     @Provides
     fun provideResponseManager() = ResponseManager()
 
-
+    @Singleton
+    @Provides
+    fun provideMovieAPI(retrofit: Retrofit): MoviesApis = retrofit.create(MoviesApis::class.java)
 
 
 }
