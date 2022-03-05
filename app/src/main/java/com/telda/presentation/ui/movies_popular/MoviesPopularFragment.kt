@@ -34,6 +34,8 @@ class MoviesPopularFragment : Fragment() {
         observeMoviesSearchData()
         observeMovieClicked()
 
+        moviesPopularViewModel.requestMovies()
+
         moviesPopularBinding.searchView.setOnQueryTextListener(object :
             SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -92,7 +94,9 @@ class MoviesPopularFragment : Fragment() {
             viewLifecycleOwner,
             EventObserver { Movie ->
                 val productDetails =
-                    MoviesPopularFragmentDirections.actionMoviesPopularFragmentToMovieDetailsFragment(Movie)
+                    MoviesPopularFragmentDirections.actionMoviesPopularFragmentToMovieDetailsFragment(
+                        Movie
+                    )
                 findNavController().navigate(productDetails)
             })
     }

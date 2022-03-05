@@ -1,8 +1,8 @@
 package com.telda.data
 
-import com.telda.domain.model.popular.Movie
-import com.telda.domain.model.popular.MoviesGateway
-import com.telda.domain.model.popular.MoviesResponse
+import com.telda.domain.model.movies_popular.Movie
+import com.telda.domain.model.movies_popular.MoviesGateway
+import com.telda.domain.model.movies_popular.MoviesResponse
 import retrofit2.Response
 
 class MoviesPopularFakeRepository : MoviesGateway {

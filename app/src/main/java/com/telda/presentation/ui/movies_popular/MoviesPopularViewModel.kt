@@ -28,11 +28,7 @@ class MoviesPopularViewModel @Inject constructor(
     private val _observeMovieClicked = MutableLiveData<Event<Movie>>()
 
 
-    init {
-        requestMovies()
-    }
-
-    private fun requestMovies() {
+    fun requestMovies() {
         responseManager.loading()
         viewModelScope.launch {
             when (val response = moviesPopularUseCase.requestPopularMovies()) {
