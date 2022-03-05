@@ -1,7 +1,7 @@
-package com.telda.domain.usecase
+package com.telda.domain.usecase.movies
 
 import com.telda.data.utils.BaseDataSource
-import com.telda.domain.model.popular.MoviesGateway
+import com.telda.domain.model.movies_popular.MoviesGateway
 import javax.inject.Inject
 
 

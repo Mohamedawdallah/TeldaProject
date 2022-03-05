@@ -6,11 +6,11 @@
 
         <variable
             name="movieObject"
-            type="com.telda.domain.model.popular.Movie" />
+            type="com.telda.domain.model.movies_popular.Movie" />
 
         <variable
             name="movieListener"
-            type="com.telda.presentation.ui.popular_movies.MoviesPopularViewModel" />
+            type="com.telda.presentation.ui.movies_popular.MoviesPopularViewModel" />
 
 
     </data>

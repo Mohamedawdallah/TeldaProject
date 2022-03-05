@@ -1,11 +1,11 @@
-package com.telda.presentation.ui.popular_movies.list
+package com.telda.presentation.ui.movies_popular.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.telda.databinding.ItemMovieBinding
-import com.telda.domain.model.popular.Movie
-import com.telda.presentation.ui.popular_movies.MoviesPopularViewModel
+import com.telda.domain.model.movies_popular.Movie
+import com.telda.presentation.ui.movies_popular.MoviesPopularViewModel
 
 class MoviesPopularAdapter(
     private val moviesList: ArrayList<Movie>,

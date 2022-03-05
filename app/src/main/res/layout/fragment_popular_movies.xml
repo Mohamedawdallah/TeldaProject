@@ -4,13 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable
-            name="Movie"
-            type="com.telda.domain.model.popular.Movie" />
 
         <variable
-            name="MovieListener"
-            type="com.telda.presentation.ui.popular_movies.MoviesPopularViewModel" />
+            name="movieListener"
+            type="com.telda.presentation.ui.movies_popular.MoviesPopularViewModel" />
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,10 +26,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/search_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                app:iconifiedByDefault="false"
                 android:background="@android:color/transparent"
                 android:drawableStart="@drawable/ic_search"
                 android:drawablePadding="@dimen/dp16w"

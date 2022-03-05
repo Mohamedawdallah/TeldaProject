@@ -1,12 +1,14 @@
-package com.telda.domain.model.popular
+package com.telda.domain.model.movies_popular
 
+import android.os.Parcelable
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import com.google.gson.annotations.SerializedName
 import com.telda.BR
+import kotlinx.android.parcel.Parcelize
 
-
-class Movie : BaseObservable() {
+@Parcelize
+class Movie : BaseObservable(), Parcelable {
     @SerializedName("id")
     var movieId: Int = 0
 
