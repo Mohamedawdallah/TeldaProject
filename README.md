@@ -18,7 +18,6 @@ Used:
 - Singleton pattern.
 - Observer pattern.
 - Clean architecture.
-- Room.
 - Retrofit.
 - Navigation component with safe args.
 - Databinding.
