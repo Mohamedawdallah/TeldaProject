@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movieSimilarObject"
+            type="com.telda.domain.model.movies_popular.Movie" />
+
+        <variable
+            name="movieSimilarListener"
+            type="com.telda.presentation.ui.movie_details.MovieDetailsViewModel" />
+
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_popular_movies_search_container"
+        android:layout_width="@dimen/dp100w"
+        android:layout_height="@dimen/dp100h"
+        android:layout_margin="@dimen/dp8w"
+        app:cardCornerRadius="@dimen/dp16w"
+        app:cardElevation="@dimen/dp4w"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/dp100w"
+                android:layout_height="@dimen/dp100h"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/dp16w"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:imageUrl="@{movieSimilarObject.moviePoster}"
+                    app:srcCompat="@drawable/img_dummy_movie" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhiteTransparent"
+                android:elevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_movie_similar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:layout_marginBottom="@dimen/dp10h"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="@{movieSimilarObject.movieTitle}"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

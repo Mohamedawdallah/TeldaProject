@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="movieCastObject"
+            type="com.telda.domain.model.movie_details.credit.Cast" />
+
+        <variable
+            name="movieCastListener"
+            type="com.telda.presentation.ui.movie_details.MovieDetailsViewModel" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/dp75w"
+        android:layout_height="@dimen/dp75h"
+        android:layout_margin="@dimen/dp10w"
+        app:cardCornerRadius="@dimen/dp60w"
+        app:cardElevation="@dimen/dp4w"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            imageUrl="@{movieCastObject.profile_path}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>
