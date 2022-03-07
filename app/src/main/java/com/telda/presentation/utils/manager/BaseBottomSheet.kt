@@ -8,10 +8,10 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-abstract class BaseBottomSheet: BottomSheetDialogFragment() {
+
+abstract class BaseBottomSheet : BottomSheetDialogFragment() {
 
     private var bottomSheetBehavior: BottomSheetBehavior<*>? = null
-
 
     override fun onStart() {
         super.onStart()
@@ -36,7 +36,7 @@ abstract class BaseBottomSheet: BottomSheetDialogFragment() {
         }
     }
 
-    fun closeSheet(){
+    fun closeSheet() {
         try {
             bottomSheetBehavior!!.isHideable = true
             bottomSheetBehavior!!.state = BottomSheetBehavior.STATE_HIDDEN

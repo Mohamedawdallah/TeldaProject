@@ -4,7 +4,6 @@ import com.telda.data.utils.BaseDataSource
 import com.telda.domain.model.movies_popular.MoviesGateway
 import javax.inject.Inject
 
-
 class MoviesPopularUseCase @Inject constructor(
     private val moviesPopularRepository: MoviesGateway
 ) :

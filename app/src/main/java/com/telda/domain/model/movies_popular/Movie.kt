@@ -29,22 +29,6 @@ class Movie : BaseObservable(), Parcelable {
         }
 
     @get:Bindable
-    @SerializedName("popularity")
-    var moviePopularity: String = ""
-        set(value) {
-            field = value
-            notifyPropertyChanged(BR.moviePopularity)
-        }
-
-    @get:Bindable
-    @SerializedName("release_date")
-    var movieReleaseDate: String = ""
-        set(value) {
-            field = value
-            notifyPropertyChanged(BR.movieReleaseDate)
-        }
-
-    @get:Bindable
     @SerializedName("backdrop_path")
     var moviePoster: String = ""
         set(value) {

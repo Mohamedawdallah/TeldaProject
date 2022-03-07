@@ -137,6 +137,4 @@ abstract class BaseActivity : AppCompatActivity() {
         return super.dispatchTouchEvent(ev)
     }
 
-
-
 }

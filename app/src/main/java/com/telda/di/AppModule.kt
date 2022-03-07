@@ -2,6 +2,7 @@ package com.telda.di
 
 import com.google.gson.GsonBuilder
 import com.telda.BuildConfig
+import com.telda.data.remote.MovieDetailsApis
 import com.telda.data.remote.MoviesApis
 import com.telda.presentation.utils.manager.ResponseManager
 import dagger.Module
@@ -60,5 +61,8 @@ object AppModule {
     @Provides
     fun provideMovieAPI(retrofit: Retrofit): MoviesApis = retrofit.create(MoviesApis::class.java)
 
+    @Singleton
+    @Provides
+    fun provideMovieDetailsAPI(retrofit: Retrofit): MovieDetailsApis = retrofit.create(MovieDetailsApis::class.java)
 
 }

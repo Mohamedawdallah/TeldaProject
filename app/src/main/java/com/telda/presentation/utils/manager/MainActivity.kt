@@ -1,13 +1,11 @@
 package com.telda.presentation.utils.manager
 
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.telda.R
 import com.telda.databinding.ActivityMainBinding
-import com.telda.presentation.ui.movies_popular.MoviesPopularViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

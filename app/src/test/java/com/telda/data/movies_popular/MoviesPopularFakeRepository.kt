@@ -1,4 +1,4 @@
-package com.telda.data
+package com.telda.data.movies_popular
 
 import com.telda.domain.model.movies_popular.Movie
 import com.telda.domain.model.movies_popular.MoviesGateway
@@ -17,7 +17,6 @@ class MoviesPopularFakeRepository : MoviesGateway {
         val moviesPopularResponse = MoviesResponse(results = movies)
 
         return Response.success(moviesPopularResponse)
-
     }
 
     override suspend fun requestSearchMovies(searchText: String): Response<MoviesResponse> {
